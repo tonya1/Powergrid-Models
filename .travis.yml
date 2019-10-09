@@ -1,10 +1,15 @@
-sudo: false
+# make use of vm's
+sudo: 'required'
 
-language: java
+# have the docker service set up (we'll
+# update it later)
+services:
+  - 'docker'
 
-jdk:
-  - oraclejdk8
-
-install: ./gradlew --version
-
-script: ./gradlew --continue
+# prepare the machine before any code
+# installation scripts
+before_install:
+  - './.travis/main.sh'
+  
+script:
+  - './.travis/build-docker.sh'
