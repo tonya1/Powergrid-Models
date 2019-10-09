@@ -171,7 +171,7 @@ echo " "
 echo "Loading the measurements"
 
 echo " "
-echo "Modifying the Powergrid-Models/Meas/constants.py file for loading data into local docker container"
+echo "Modifying the Meas/constants.py file for loading data into local docker container"
 sed -i'.bak' -e 's/^blazegraph_url.*$/blazegraph_url = \"http:\/\/localhost:8889\/bigdata\/sparql\"/' Meas/constants.py
 
 cd Meas

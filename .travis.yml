@@ -1,3 +1,7 @@
+language: python
+python:
+  - "3.6"
+
 # make use of vm's
 sudo: 'required'
 
@@ -10,6 +14,9 @@ services:
 # installation scripts
 before_install:
   - './.travis/main.sh'
+
+install:
+  - pip install -r houses/requirements.txt
   
 script:
   - './.travis/build-docker.sh'
