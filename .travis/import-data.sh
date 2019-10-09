@@ -254,13 +254,13 @@ if [ $status -ne 0 ]; then
   exit 1
 fi
 
-echo " "
-echo "Remove the build container"
-docker rmi ${IMAGE}:build
-status=$?
-if [ $status -ne 0 ]; then
-  echo "Error: stop status $status"
-  exit 1
-fi
+#echo " "
+#echo "Remove the build container"
+#docker rmi ${IMAGE}:build
+#status=$?
+#if [ $status -ne 0 ]; then
+#  echo "Error: stop status $status"
+#  exit 1
+#fi
 
 exit 0
