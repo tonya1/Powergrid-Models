@@ -19,4 +19,4 @@ install:
   - pip install -r houses/requirements.txt
   
 script:
-  - travis_wait 40 './.travis/build-docker.sh'
+  - travis_wait 60 './.travis/build-docker.sh'

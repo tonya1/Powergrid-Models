@@ -196,8 +196,7 @@ wc -l *txt | grep total | awk '{print $1}'
 
 echo " "
 echo "Loading measurements files"
-# random shuffle to try and prevent timeouts
-ls -1 *txt | shuf | xargs -P 2 -n 1 -I, bash -c 'echo "  $(date) Loading measurments file ,";python3 ../InsertMeasurements.py ,'
+ls -1 *txt | xargs -P 2 -n 1 -I, bash -c 'echo "  $(date) Loading measurments file ,";python3 ../InsertMeasurements.py ,'
 
 echo " "
 rangeCount=`curl -s -G -H 'Accept: application/xml' "${url_blazegraph}sparql" --data-urlencode ESTCARD | sed 's/.*rangeCount=\"\([0-9]*\)\".*/\1/'`
