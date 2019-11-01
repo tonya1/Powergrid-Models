@@ -15,7 +15,8 @@ Clear
 ! The source is set for 1.0 per unit and the Short circuit impedance is set to a small value (0.0001 ohms)
 ! The ~ is just shorthad for "more" for the New or Edit commands
 
-New object=circuit.ieee123pv
+!New object=circuit.ieee123pv
+New object=circuit.ieee123ts
 ~ basekv=4.16 Bus1=150 pu=1.00 R1=0 X1=0.0001 R0=0 X0=0.0001
 
 ! 3-PHASE GANGED REGULATOR AT HEAD OF FEEDER (KERSTING ASSUMES NO IMPEDANCE IN THE REGULATOR)
@@ -28,7 +29,7 @@ new regcontrol.creg1a transformer=reg1a winding=2 vreg=120 band=2 ptratio=20 ctp
 ! REDIRECT INPUT STREAM TO FILE CONTAINING DEFINITIONS OF LINECODES
 ! This file defines the line impedances is a similar manner to the description in the test case.
 
-Redirect        IEEELinecodes.DSS
+Redirect        IEEELineCodes.dss
 
 ! LINE DEFINITIONS
 ! Lines are defined by referring to a "linecode" that contains the impedances per unit length
@@ -201,7 +202,7 @@ Redirect capacitor.dss
 !REGULATORS - REDIRECT TO DEFINITIONS FILE
 ! This file contains definitions for the remainder of regulators on the feeder:
 
-Redirect IEEE123Regulators.DSS
+Redirect IEEE123Regulators.dss
 //Redirect IEEE123Regulators_fixed.DSS
 
 ! SPOT LOADS -- REDIRECT INPUT STREAM TO LOAD DEFINITIONS FILE

@@ -1,0 +1,9 @@
+//
+cd /home/osboxes/git/Powergrid-Models.new/blazegraph/test/dss/NREL
+redirect IEEE123Master_fixedVR.dss
+cd /home/osboxes/git/Powergrid-Models.new/blazegraph/test/
+export summary  IEEE123_TS_s.csv
+export voltages IEEE123_TS_v.csv
+export currents IEEE123_TS_i.csv
+export taps     IEEE123_TS_t.csv
+export cim100 file=IEEE123_TS.xml sub=IEEE123 subgeo=Medium geo=IEEE fid=6B3B8DF7-4F84-431C-9FA8-68B08E00CD05 sid=FE44B314-385E-C2BF-3983-3A10C6060022 sgrid=1CD7D2EE-3C91-3248-5662-A43EFEFAC224 rgnid=73C512BD-7249-4F50-50DA-D93849B89C43
