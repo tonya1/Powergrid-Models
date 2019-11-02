@@ -15,7 +15,7 @@ Clear
 ! The source is set for 1.0 per unit and the Short circuit impedance is set to a small value (0.0001 ohms)
 ! The ~ is just shorthad for "more" for the New or Edit commands
 
-!New object=circuit.ieee123pv
+//New object=circuit.ieee123pv
 New object=circuit.ieee123ts
 ~ basekv=4.16 Bus1=150 pu=1.00 R1=0 X1=0.0001 R0=0 X0=0.0001
 
@@ -215,7 +215,7 @@ redirect IEEE123CommLoads.dss       // 3-phase and 1-phase delta loads, always u
 //redirect IEEE123PrimaryLoads.dss    // 1-phase wye loads on the primary
 redirect IEEE123SecondaryLoads.dss  // 1-phase wye loads converted to secondary service
 
-redirect pvsystems_high_pvs.dss
+// redirect pvsystems_high_pvs.dss
 
 ! All devices in the test feeder are now defined.
 !
